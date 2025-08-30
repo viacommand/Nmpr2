@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Form with DOM Styling</title>
+        <style>
+            body {
+                  font-family: Arial, sans-serif;
+                        margin: 40px;
+                            }
+                                form {
+                                      width: 320px;
+                                            padding: 20px;
+                                                  border: 1px solid #ccc;
+                                                        border-radius: 8px;
+                                                              margin-top: 15px;
+                                                                  }
+                                                                      input[type="text"], input[type="email"], input[type="number"] {
+                                                                            width: 100%;
+                                                                                  padding: 8px;
+                                                                                        margin: 8px 0;
+                                                                                              border: 1px solid #ccc;
+                                                                                                    border-radius: 4px;
+                                                                                                        }
+                                                                                                            button {
+                                                                                                                  background-color: #007bff;
+                                                                                                                        color: white;
+                                                                                                                              border: none;
+                                                                                                                                    padding: 10px 15px;
+                                                                                                                                          cursor: pointer;
+                                                                                                                                                border-radius: 4px;
+                                                                                                                                                    }
+                                                                                                                                                        button:hover {
+                                                                                                                                                              background-color: #0056b3;
+                                                                                                                                                                  }
+                                                                                                                                                                    </style>
+                                                                                                                                                                    </head>
+                                                                                                                                                                    <body>
+
+                                                                                                                                                                      <h2 id="formHeading">User Registration Form</h2>
+
+                                                                                                                                                                        <form id="myForm">
+                                                                                                                                                                            <label for="name">Name:</label><br>
+                                                                                                                                                                                <input type="text" id="name" name="name" required><br>
+
+                                                                                                                                                                                    <label for="email">Email:</label><br>
+                                                                                                                                                                                        <input type="email" id="email" name="email" required><br>
+
+                                                                                                                                                                                            <label for="age">Age:</label><br>
+                                                                                                                                                                                                <input type="number" id="age" name="age"><br><br>
+
+                                                                                                                                                                                                    <button type="button" onclick="applyDOMChanges()">Submit</button>
+                                                                                                                                                                                                      </form>
+
+                                                                                                                                                                                                        <script>
+                                                                                                                                                                                                            function applyDOMChanges() {
+                                                                                                                                                                                                                  // Highlight mandatory fields
+                                                                                                                                                                                                                        document.getElementById("name").style.backgroundColor = "#fff8b3";
+                                                                                                                                                                                                                              document.getElementById("email").style.backgroundColor = "#fff8b3";
+
+                                                                                                                                                                                                                                    // Style heading
+                                                                                                                                                                                                                                          document.getElementById("formHeading").style.color = "blue";
+                                                                                                                                                                                                                                                document.getElementById("formHeading").style.textTransform = "uppercase";
+                                                                                                                                                                                                                                                      document.getElementById("formHeading").style.textAlign = "center";
+
+                                                                                                                                                                                                                                                            // Style form border
+                                                                                                                                                                                                                                                                  document.getElementById("myForm").style.border = "2px solid green";
+                                                                                                                                                                                                                                                                        document.getElementById("myForm").style.backgroundColor = "#f0f8ff";
+
+                                                                                                                                                                                                                                                                              // Bold all labels
+                                                                                                                                                                                                                                                                                    let labels = document.getElementsByTagName("label");
+                                                                                                                                                                                                                                                                                          for (let i = 0; i < labels.length; i++) {
+                                                                                                                                                                                                                                                                                                  labels[i].style.fontWeight = "bold";
+                                                                                                                                                                                                                                                                                                        }
+                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                              </script>
+
+                                                                                                                                                                                                                                                                                                              </body>
+                                                                                                                                                                                                                                                                                                              </html>
